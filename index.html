@@ -4,40 +4,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gemini Chatbot</title>
+  <title>Muse Chatbot</title>
+  <link rel="icon" type="image/jpeg" href="muse.jpeg">
   <link rel="stylesheet" href="styles.css">
   <script type="importmap">
-        {
-          "imports": {
-            "@google/generative-ai": "https://esm.run/@google/generative-ai"
-          }
-        }
-    </script>
+    {
+      "imports": {
+        "@google/generative-ai": "https://esm.run/@google/generative-ai"
+      }
+    }
+  </script>
 </head>
 
 <body>
-  <main>
-    <div id="chatbox">
+<header>
+  <h1>Muse Chatbot</h1>
+</header>
+<main>
+  <div id="chatbox">
 
-      <div class="card card1">
-        <div class="content" id="messages"></div>
-      </div>
-
-      <div class="card card2">
-        <input type="text" id="prompt" placeholder="Type your message here...">
-      </div>
-
-      <div class="card card3">
-        <button id="sendButton">Send</button>
-      </div>
-
-
+    <div class="card card1">
+      <div class="content" id="messages"></div>
     </div>
-  </main>
 
+    <div class="card card2">
+      <input type="text" id="prompt" placeholder="Type your message here...">
+    </div>
 
-  <script type="module" src="script.js"></script>
-  <script src="assets/fontawesome/js/all.min.js"></script>
+    <div class="card card3">
+      <button id="sendButton">Send</button>
+    </div>
+
+  </div>
+</main>
+
+<script type="module" src="script.js"></script>
+<script src="assets/fontawesome/js/all.min.js"></script>
 </body>
 
 </html>
