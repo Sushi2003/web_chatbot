@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gemini Chatbot</title>
-    <link rel="stylesheet" href="styles.css">
-    <script type="importmap">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gemini Chatbot</title>
+  <link rel="stylesheet" href="styles.css">
+  <script type="importmap">
         {
           "imports": {
             "@google/generative-ai": "https://esm.run/@google/generative-ai"
@@ -13,16 +14,30 @@
         }
     </script>
 </head>
-<body>
-<div id="chatbox">
-    <div id="messages"></div>
-    <div id="input">
-        <input type="text" id="prompt" placeholder="Type your message here...">
-        <button id="sendButton">Send</button>
-    </div>
-</div>
 
-<script type="module" src="script.js"></script>
-<script src="assets/fontawesome/js/all.min.js"></script>
+<body>
+  <main>
+    <div id="chatbox">
+
+      <div class="card card1">
+        <div class="content" id="messages"></div>
+      </div>
+
+      <div class="card card2">
+        <input type="text" id="prompt" placeholder="Type your message here...">
+      </div>
+
+      <div class="card card3">
+        <button id="sendButton">Send</button>
+      </div>
+
+
+    </div>
+  </main>
+
+
+  <script type="module" src="script.js"></script>
+  <script src="assets/fontawesome/js/all.min.js"></script>
 </body>
+
 </html>

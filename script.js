@@ -1,6 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const API_KEY = ""; // Replace with your API key
+const API_KEY = "AIzaSyAFUr_D886zrw8iP3fJyV29af5XgjoWTPQ"; // Replace with your API key
 
 const genAI = new GoogleGenerativeAI(API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
@@ -47,7 +47,7 @@ async function sendMessage() {
     const messagesContainer = document.getElementById('messages');
     const userMessage = document.createElement('div');
     userMessage.className = 'message user';
-    userMessage.innerHTML = `<i class="fas fa-user"></i><div class="text">${prompt}</div>`;
+    userMessage.innerHTML = `<div class="text">${prompt}</div><i class="fas fa-user"></i>`;
     messagesContainer.appendChild(userMessage);
 
     const botTypingMessage = document.createElement('div');
@@ -81,3 +81,11 @@ document.getElementById('prompt').addEventListener('keypress', function (e) {
         sendMessage();
     }
 });
+
+
+const updateCursor = ({ x, y }) => {
+    document.documentElement.style.setProperty('--x', x)
+    document.documentElement.style.setProperty('--y', y)
+}
+
+document.body.addEventListener('pointermove', updateCursor)
